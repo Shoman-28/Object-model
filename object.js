@@ -29,13 +29,19 @@ const salamAli = {
 }
 
 // sort-code
-person.chargeBill.call(salamAli, 48, 10, 20);
-person.chargeBill.call(salamAli, 52, 12, 12);
-console.log(salamAli.salary);
 
-person.chargeBill.call(salamKhan, 18, 20, 10);
-person.chargeBill.call(salamKhan, 52, 12, 10);
-console.log(salamKhan.salary);
+// person.chargeBill.call(salamAli, 48, 10, 20);
+// person.chargeBill.call(salamAli, 52, 12, 12);
+// console.log(salamAli.salary);
+
+// person.chargeBill.call(salamKhan, 18, 20, 10);
+// person.chargeBill.call(salamKhan, 52, 12, 10);
+// console.log(salamKhan.salary);
+
+person.chargeBill.apply(salamAli, [20, 20, 10]);
+console.log(salamAli.salary);
+person.chargeBill.apply(person, [20, 20, 10]);
+console.log(person.salary);
 // sort-code-end
 
 
