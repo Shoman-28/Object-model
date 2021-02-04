@@ -5,9 +5,9 @@ let person = {
     getFullName: function(){
         console.log(this.fristName, this.lastName);
     },
-    chargeBill(amount){
+    chargeBill(amount, tips, tax){
         console.log(this);
-        this.salary = this.salary - amount;
+        this.salary = this.salary - amount - tips - tax;
         return this.salary;
     }
 }
@@ -29,12 +29,12 @@ const salamAli = {
 }
 
 // sort-code
-person.chargeBill.call(salamAli, 48);
-person.chargeBill.call(salamAli, 52);
+person.chargeBill.call(salamAli, 48, 10, 20);
+person.chargeBill.call(salamAli, 52, 12, 12);
 console.log(salamAli.salary);
 
-person.chargeBill.call(salamKhan, 18);
-person.chargeBill.call(salamKhan, 52);
+person.chargeBill.call(salamKhan, 18, 20, 10);
+person.chargeBill.call(salamKhan, 52, 12, 10);
 console.log(salamKhan.salary);
 // sort-code-end
 
