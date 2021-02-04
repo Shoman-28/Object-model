@@ -27,13 +27,26 @@ const salamAli = {
     salary: 12000,
     
 }
-const salamAliCharg = person.chargeBill.bind(salamAli);
-salamAliCharg(200);
-salamAliCharg(200);
-console.log(salamAli.salary);
-console.log(person.salary);
 
-const salamKhanCharge = person.chargeBill.bind(salamKhan);
-salamKhanCharge(200);
+// sort-code
+person.chargeBill.call(salamAli, 48);
+person.chargeBill.call(salamAli, 52);
+console.log(salamAli.salary);
+
+person.chargeBill.call(salamKhan, 18);
+person.chargeBill.call(salamKhan, 52);
 console.log(salamKhan.salary);
-// person.chargeBill();
+// sort-code-end
+
+
+// const salamAliCharg = person.chargeBill.bind(salamAli);
+// salamAliCharg(200);
+// salamAliCharg(200);
+// console.log(salamAli.salary);
+// console.log(person.salary);
+
+// const salamKhanCharge = person.chargeBill.bind(salamKhan);
+// salamKhanCharge(200);
+// console.log(salamKhan.salary);
+
+
